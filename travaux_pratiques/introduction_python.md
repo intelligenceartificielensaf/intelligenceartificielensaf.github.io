@@ -6,7 +6,7 @@ permalink: /travaux_pratiques/introduction_python/
 
 
 
-## **Table de matières**: ##
+## Table de matière ##
 
 - [Introduction](#Introduction)
 -  [Environnement virtuel](#virtualenv) 
