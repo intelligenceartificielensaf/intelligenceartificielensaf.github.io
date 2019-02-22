@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : page_stanford
 date   :  2019/02/21  
 permalink: /travaux_pratiques/introduction_python/
 ---
