@@ -1,5 +1,5 @@
 ---
-layout: page_stanford
+layout: page
 title: About
 permalink: /about/
 ---

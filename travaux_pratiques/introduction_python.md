@@ -1,5 +1,5 @@
 ---
-layout : page_stanford
+layout : page
 date   :  2019/02/21  
 permalink: /travaux_pratiques/introduction_python/
 ---
@@ -128,7 +128,189 @@ Voici aussi quelque commandes qui peuvent vous aider:
 ## Tutorial Python
 <a name="python"> </a>
 
+Les deux projets de ce cours utiliserons le langage `python`. `Python` est un
+langage **interprété**, orienté objet. La section courante servira comme
+introduction ( ou rappel) des notions de bases de *python*.
 
+> Je vous encourage à
+ suivre le tutoriel en exécutant chaque commande vous même et interpréter le
+ résultat.
+
+### Table de matières:
+* [Invoquer l'interpréteur Python](#invoquePython)
+* [Opérateurs](#operators)
+* [Chaines de caractères](#string)
+* [Structure de données](#dataSrctures)
+* [Scripts](#scripts)
+* [Indentation](#indentation)
+* [Fonctions](#functions)
+* [Objets](#oop)
+
+
+
+### Invoquer l'interpréteur Python ###
+<a name="invoquePython"> </a>
+Le langage **python** peut être exécuté selon deux modes. Le premier comme un
+interpréteur simple, ou depuis la ligne de commande pour exécuter un `script`.
+Dans un premier temps, nous allons utiliser le premier mode pour une interaction
+simple avec le langage.
+
+
+```python
+(AI) ➜  ~ python
+Python 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 23:32:55) 
+[GCC 7.2.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+```
+
+
+### Operateurs ###
+<a name='operators'></a>
+
+**python** peut être utilisé pour évaluer des expressions arithmétiques.  Par
+exemple on peut évaluer la somme de deux entiers, le résultat sera affiché après
+le `prompt`.
+
+```python
+>>> 1+23
+24
+>>> 4*3
+12
+>>> 2**4
+16
+>>> 72%5
+2
+```
+
+`Python` offre aussi des types **booléens** pour la manipulation des expressions
+logiques.
+
+```python
+>>> 1 == 32
+False
+>>> not (1==0)
+True
+>>> (2==2) and (4==1)
+False
+>>> (2==2) or (4==1)
+True
+```
+
+<a name='string'></a>
+Comme le langage **Java**, python offre une classe pour le traitement des
+chaines de caractères.
+
+```python
+>>> A = 'artificial'  #declarer une chaine
+>>> A.upper()          # mettre tout en majuscule
+'ARTIFICIAL'
+>>> B = 'intelligence   '   #remarquer les espace additionnels
+'intelligence '
+>>> B = B.strip()           # éliminer les espaces
+'inteliigence'
+>>> C = A+" " +B            #concaténation de chaines
+'ARTIFICIAL intelligence'
+```
+
+pour une liste détaillée des méthodes, je renvoie à la documentation officielle
+  de la classe [string](https://docs.python.org/2/library/string.html)
+
+
+> Une autre méthode simple pour investir les fonctions d'une classe et la
+fonction `dir`.
+
+  1. Utiliser cette méthode sur une chaine de caractères pour lister l'ensemble des
+   méthodes offertes par cette classe.
+
+### Structures de données 
+<a name='dataSrctures'></a>
+
+Python est équipée par plusieurs **structures de données** utiles qui sont
+similaire à ceux offerts par le module `Collections` de Java.
+
+#### Listes
+
+Une `liste` est une collection de données **mutable** hétérogènes. Elle est
+définir par l'opérateur **[ ]**.
+
+```python
+>>> fruits = ['apple', 'orange', 'pear','banana']
+>>> fruits
+['apple', 'orange', 'pear','banana']
+>>> fruits[0]           # premier élément
+'apple'
+>>> fruits[:2]         # les deux premiers éléments
+['apple', 'orange']
+>>> fruits[-2:]         # les deux derniers éléments
+>>> fruits.append('kiwi')      #ajouter un element
+>>> fruits
+['apple', 'orange', 'pear','banana','kiwi']
+>>> fruits = fruits + [1,2]
+['apple', 'orange', 'pear', 'banana', 'kiwi', 1, 2]
+>>> a = fruits.pop()        # extraire le dernier élément
+2
+>>> fruits[-1]= 'grapefruit'
+['apple', 'orange', 'pear', 'banana', 'kiwi','grapefruit']
+```
+
+
+On peut parcourir les liste d'une liste par une boucle for:
+
+```python
+for x in fruits:
+	print x
+```
+
+Les éléments d'une liste peuvent être de n'importe quel type. Par exemple, on pourra définir une liste de fonctions et les appliquer à un nombre.
+
+```python
+>>> from math import sin,cos,tan
+>>> functions = [sin,cos,tan]      #liste de fonction
+>>> x= 3.4 
+>>>for f in functions:
+		print f(x)
+-0.255541102027
+-0.966798192579
+0.264316900867
+```
+
+On pourra aussi définir une liste de liste:
+
+```python
+>>> lstofLists = [['a','b','c'],[1,2,3], ['un','deux','trois']
+>>> lstofLists[0][-1]
+```
+
+>  Exercice: Créer une liste A qui contient les lettres de l'alphabet. Créer ensuite une liste B qui contient les caractères numériques. Calculer une liste Fusion qui combine chaque caractère de A et un chiffre de B.
+
+
+### Tuples
+
+Les `tuples` offre une structure de données de collections qui sont **immutable** (i.e. On peut pas changer leur contenu). Les tuples sont crées par l'opérateur **( )**
+
+
+```python
+>>> pair = (3,4)
+>>> pair[0]
+3
+>>> x,y = pair
+>>> x
+3
+>>> y
+4
+>>> pair[1] =6       #erreur les tuples sont immutable
+TypeError
+```
+
+
+### Sets
+
+
+<a name='scripts'></a>
+
+<a name='indentation'></a>
+<a name='functions'></a>
+<a name='oop'></a>
 
 [^1]: Votre ligne de commande peut être différent, comme il est possible de la personnaliser.
 
