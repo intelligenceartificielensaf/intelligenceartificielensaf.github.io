@@ -547,6 +547,41 @@ python autograder.py -q q1
 
 Vous devez vous assurer que vous avez passé la solution
 
+## Question 2: Acheter des Fruits
 
+Implémenter la fonction *buyLotsOfFruit(orderList)* dans le fichier `buyLotsOfFruit.py`. Cette fonction prend comme argument une liste de couples **(fruit, pound)** et renvoie le prix de cette liste.
+
+> S'il y as un fruit dans la liste qui ne figure pas dans la  liste de fruits
+> offerts par le magasin, la fonction doit afficher un message d'erreur et
+> renvoie  la valeur **None**.
+
+
+> Il ne faut, dans aucun cas, changer la variable **fruitPrices**.
+
+
+Pour vérifier votre réponse, exécuter le code suivant.
+
+```python
+python autograder.py -q q2 --mute
+```
+
+### Question 3: acheter avec meilleur prix
+
+Remplir la fonction **shopSmart(orders, shops)** dans le fichier `shopSmart.py`.
+Cette fonction prend, comme argument, une liste *orders* comme fruits à acheter avec leur
+poids. Elle prend aussi une liste de magasins *shops* où on peut acheter ces
+fruits. Cette fonction doit renvoie le **magasin** avec le coût minimal de notre
+ordre.
+
+Vérifier votre réponse avec
+
+```python
+python autograder.py -q q3  --mute
+```
+
+
+> Félicitions, vous avez terminé avec succès ce premier TP. Vous êtes
+maintenant prêt, pour entrer dans le fabuleux monde de **PACMAN**.
+----
 [^2]: La version récente de python est 3.x, mais nous nous contentons de python 2.7 pour des raisons de compatibilités.
 
