@@ -13,7 +13,10 @@ permalink: /travaux_pratiques/introduction_python/
 - [Les bases de linux](#linux)
 - [Tutorial python](#python)
 - [Autograder](#autograder)
-- [Question 1](#question1)
+- [Question 1: Addition ](#question1)
+- [Question 2: Acheter un ordre](#buyFruits)
+- [Question 3: Meilleur magasin](#bestShop)
+
 
 
 
@@ -548,6 +551,7 @@ python autograder.py -q q1
 Vous devez vous assurer que vous avez passé la solution
 
 ## Question 2: Acheter des Fruits
+<a name='buyFruits'></a>
 
 Implémenter la fonction *buyLotsOfFruit(orderList)* dans le fichier `buyLotsOfFruit.py`. Cette fonction prend comme argument une liste de couples **(fruit, pound)** et renvoie le prix de cette liste.
 
@@ -566,6 +570,7 @@ python autograder.py -q q2 --mute
 ```
 
 ### Question 3: acheter avec meilleur prix
+<a name='bestShop'></a>
 
 Remplir la fonction **shopSmart(orders, shops)** dans le fichier `shopSmart.py`.
 Cette fonction prend, comme argument, une liste *orders* comme fruits à acheter avec leur
@@ -583,5 +588,6 @@ python autograder.py -q q3  --mute
 > Félicitions, vous avez terminé avec succès ce premier TP. Vous êtes
 maintenant prêt, pour entrer dans le fabuleux monde de **PACMAN**.
 ----
+
 [^2]: La version récente de python est 3.x, mais nous nous contentons de python 2.7 pour des raisons de compatibilités.
 
