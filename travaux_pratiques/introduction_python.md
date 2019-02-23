@@ -12,6 +12,10 @@ permalink: /travaux_pratiques/introduction_python/
 -  [Environnement virtuel](#virtualenv) 
 - [Les bases de linux](#linux)
 - [Tutorial python](#python)
+- [Autograder](#autograder)
+- [Question 1](#question1)
+
+
 
 
 ## Introduction ##
@@ -476,4 +480,73 @@ Carre [width=4]
 
 [^1]: Votre ligne de commande peut être différent, comme il est possible de la personnaliser.
 
+## Autograder
+<a name='autograder'></a>
+
+Les deux projet de  ce cours contient un outil appelé `autograder` qui permet la
+notation automatique de votre solution. Ainsi vous pouvez essayer plusieurs
+solutions et l'autograder va vous renvoier un feed-back de votre solution. Les
+commentaires de ce dernier, vous seront d'une grande utilisté pour détecter vos
+erreurs ou de de confirmer la exactitude de vos réponses.
+
+Dans section, on va se familiariser avec cet outil et lister les méthodes pour intéragir avec ce dernier.
+
+Vous devez télécharcher le contenu du projet [tutorial](http://ai.berkeley.edu/projects/release/tutorial/v1/001/tutorial.zip)
+
+Ainsi dans votre project, executé la commande:
+
+```python
+python autograder.py
+Question q1
+===========
+
+*** FAIL: test_cases/q1/addition1.test
+*** 	add(a,b) must return the sum of a and b
+*** 	student result: "0"
+*** 	correct result: "2"
+*** FAIL: test_cases/q1/addition2.test
+*** 	add(a,b) must return the sum of a and b
+*** 	student result: "0"
+*** 	correct result: "5"
+*** FAIL: test_cases/q1/addition3.test
+*** 	add(a,b) must return the sum of a and b
+*** 	student result: "0"
+*** 	correct result: "7.9"
+*** Tests failed.
+
+### Question q1: 0/1 ###
+```
+On peut voir l'**autograder**  evalue votre solution sur différent cas et vous
+renvoie votre note indiquant si vous avez passé le test ou non.
+
+
+## Question 1 : Addition
+<a name='question1'></a>
+
+Ouvrez le fichier `addition.py` et examiner la définition de la méthode **add**
+
+
+```python
+"""
+Run python autograder.py
+"""
+
+def add(a, b):
+    "Renvoie la somme de a et b"
+    "*** Votre code ***"
+    return 0
+```
+
+Changer le contenu de la fonction pour calculer la bonne solution. Une fois
+terminé, exécuter la commande pour vérifier votre solution:
+
+
+```python
+python autograder.py -q q1
+```
+
+Vous devez vous assurer que vous avez passé la solution
+
+
 [^2]: La version récente de python est 3.x, mais nous nous contentons de python 2.7 pour des raisons de compatibilités.
+
