@@ -142,7 +142,6 @@ introduction ( ou rappel) des notions de bases de *python*.
 * [Chaines de caractères](#string)
 * [Structure de données](#dataSrctures)
 * [Scripts](#scripts)
-* [Indentation](#indentation)
 * [Fonctions](#functions)
 * [Objets](#oop)
 
@@ -305,12 +304,175 @@ TypeError
 
 ### Sets
 
+Un `set` (ensemble) est une structure de données pour réprésenter une liste non
+ordonnée sans des répétitions.
+
+```python
+>>>formes = ['cercle','carre', 'triangle', 'cercle'] #liste contenant des répetition.
+>>>Ensemble = set(formes)   # créer un ensemble de cette liste
+ {'carre', 'cercle', 'triangle'}
+>>> Ensemble.add('Polygone')
+>>>Ensemble
+{'carre', 'cercle', 'polygon', 'triangle'}
+>>> Ensemble.add(cercle)  # dexiste déja donc rien ne change
+{'carre', 'cercle', 'polygon', 'triangle'}
+>>> 'cercle' in Ensemble   #test d'appartenance
+True
+```
+
+
+On peut appliquer les opérations mathématique *ensemblistes* (Unition,
+Intersection, Soustraction)
+
+```python
+>>>Ensemble = set(['cercle','carre', 'triangle', 'cercle'])
+>>>favoris  = set(['cercle','triangle'])
+>>>Ensemble-favoris   #A - B (elements dans A et non dans B)
+{'carre'}
+>>>Ensemble & favoris  #intesection 
+{'cercle','triangle'}
+>>> Ensemble | favoris # Union
+{'cercle','triangle','carre'}
+```
+> Faites attention, les éléments d'un ensemble ne sont par ordonés. (.i.e. Il
+> faut pas assumer qu'il vont apparaitre dans le même ordre.
+
+### Dictionnaires
+Un dictionnaire ou *hash-map* est une structure de données qui permet un accès
+rapide à une collection indexé par un ensemble de **clés**. La clé doit être un
+objet *immutable*  pour permettre une identification unique des valeurs.
+
+
+```python
+>>>Scientists = {'knuth': 42.0, 'turing': 56.0, 'nash': 92.0}
+>>>Scientists['knuth']   #accéder une valeur par sa clé
+42.0
+>>> Scientists['turing'] = 87       #changer la valeur
+>>> del Scientists['turing']        #détruire l'entrée
+>>> Scientists.keys()           #afficher les clés
+['knuth', 'nash']
+>>> Scientists.values()       #afficher les valeurs
+[42.0, 92.0]
+
+>>> Scientists.items()       # list of tuple [(key,val),....]
+```
+
+> Exercice: Supposons qu'on veut envoyer un message par un code simple où
+> chaque lettre est codée par un entier qui représente sa position (i.e A=1,
+> B=2,....)
+> 1. Créer un dictionnaire pour codes cettres
+> 2. Afficher le code du message 'artificialintelligence'
 
 <a name='scripts'></a>
+Maintenant que vous avez accumulé les notions de bases de la syntaxe **python**.
+On peut écrire des programmes simples pour démontrer les capacités du langage
 
-<a name='indentation'></a>
+Changer le contenu du fichier `foreach.py` dans votre projet:
+```python
+# This is what a comment looks like 
+fruits = ['apples','oranges','pears','bananas']
+for fruit in fruits:
+    print fruit + ' for sale'
+
+fruitPrices = {'apples': 2.00, 'oranges': 1.50, 'pears': 1.75}
+for fruit, price in fruitPrices.items():
+    if price < 2.00:
+        print '%s cost %f a pound' % (fruit, price)
+    else:
+        print fruit + ' are too expensive!'
+```
+
+Pour exécuter alors ce fichier, lancer la commande suivante:
+
+```python
+python foreach.py
+```
+
+Investiguer le contenu du fichier `listcomp.py` qui démontre la puissance des
+[lists  comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
+
+```python
+nums = [1,2,3,4,5,6]
+oddNums = [x for x in nums if x % 2 == 1]
+print oddNums
+oddNumsPlusOne = [x+1 for x in nums if x % 2 ==1]
+print oddNumsPlusOne
+```
+> Executer ce script, puis générer une liste comprhension qui garde qui, à
+> partir d'une liste il ne garde que les chaines ayant une longeur supérieure ou
+> égale à 5. Les chaines sauvegardées doivent être en lettre **miniscules**.
+> la solution est dans `listcomp2.py`
+
+
+### Fonctions
 <a name='functions'></a>
+
+Similaire à tous les langages de programmation, python vous permet de définir
+vos propres **fonctions**.
+
+
+```python
+fruitPrices = {'apples':2.00, 'oranges': 1.50, 'pears': 1.75}
+
+def buyFruit(fruit, numPounds):
+    if fruit not in fruitPrices:
+        print "Sorry we don't have %s" % (fruit)
+    else:
+        cost = fruitPrices[fruit] * numPounds
+        print "That'll be %f please" % (cost)
+
+# Main Function
+if __name__ == '__main__':        
+    buyFruit('apples',2.4)
+    buyFruit('coconuts',2) 
+```
+
+> Classique (exercice avancé ***) Ecire la fonction quicksort avec une
+> comprehension. Vous trouverez la solution dans `quickSort.py`
+
+#### Programmation Orienté Objet
 <a name='oop'></a>
+
+La majorité des questions des projet va vous demander de changer le contenu d'un
+fonction ou méthodes d'un objet.  Ainsi, dans cette section, nous présonterons
+une introduction simple à la programmation *orienté object* par python.
+
+```python
+class Rectangle:
+  def __init__(self,width):
+    """
+    Constructeur par une longueur
+    """
+    self.width = width
+
+  def get_width(self):
+    """
+    Renvoir la longueur du rectangle
+    """
+    return self.width
+  
+  def  get_surface(self):
+    return self.width**2
+
+  def __str__(self):
+    return "Carre [width=%d]" %self.width
+```
+
+
+Cette classe définit un `Rectangle` avec un constcuteur, deux **getters** et une
+méthode pour convertir en **string**.
+
+#### Utiliser les objets:
+
+```python
+>>> A =Rectangle(4)
+>>> A.get_width
+4
+>>> A.get_surface()
+16
+>>> print A
+Carre [width=4]
+```
 
 [^1]: Votre ligne de commande peut être différent, comme il est possible de la personnaliser.
 
