@@ -494,7 +494,7 @@ erreurs ou de de confirmer la exactitude de vos réponses.
 
 Dans section, on va se familiariser avec cet outil et lister les méthodes pour intéragir avec ce dernier.
 
-Vous devez télécharcher le contenu du projet [tutorial](http://ai.berkeley.edu/projects/release/tutorial/v1/001/tutorial.zip)
+Vous devez télécharcher le contenu du projet [tutorial](https://github.com/intelligenceartificielensaf/intelligenceartificielensaf.github.io/blob/master/travaux_pratiques/tutorial.zip)
 
 Ainsi dans votre project, executé la commande:
 
