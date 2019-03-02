@@ -110,7 +110,7 @@ hello_world
 ```
 
 
-Nous allons télécharger les contenu de de projet qui dans [python_basics.zip](ai.berkeley.edu/projects/release/tutorial/v1/001/python_basics.zip). Puis nous allons décompresser son contenu.
+Nous allons télécharger les contenu de de projet qui dans [python_basics.zip](https://github.com/intelligenceartificielensaf/intelligenceartificielensaf.github.io/blob/master/travaux_pratiques/python_basics.zip). Puis nous allons décompresser son contenu.
 
 ```bash
 [AI_ensa@cour ~/folder]$ wget ai.berkeley.edu/projects/release/tutorial/v1/001/python_basics.zip
