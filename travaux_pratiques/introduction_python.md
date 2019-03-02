@@ -6,7 +6,7 @@ permalink: /travaux_pratiques/introduction_python/
 
 
 
-## Table de matière ##
+## Table de matière
 
 - [Introduction](#Introduction)
 -  [Environnement virtuel](#virtualenv) 
@@ -405,8 +405,8 @@ print oddNums
 oddNumsPlusOne = [x+1 for x in nums if x % 2 ==1]
 print oddNumsPlusOne
 ```
-> Executer ce script, puis générer une liste comprhension qui garde qui, à
-> partir d'une liste il ne garde que les chaines ayant une longeur supérieure ou
+> Executer ce script, puis générer une liste comprhension qui garde 
+> que les chaines ayant une longeur supérieure ou
 > égale à 5. Les chaines sauvegardées doivent être en lettre **miniscules**.
 > la solution est dans `listcomp2.py`
 
