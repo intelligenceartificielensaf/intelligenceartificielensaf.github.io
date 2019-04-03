@@ -50,7 +50,7 @@ lire est **comprendre** certains fichier **clé** pour pouvoir répondre au
 questions. Vous pouvez ignorer certains fichiers (pratiquement destinés à la
 préparation de votre environnement).
 
-Le lien du dossier est le suivant : `To be added` 
+> **Le lien du dossier est le suivant : [search.zip](https://github.com/intelligenceartificielensaf/intelligenceartificielensaf.github.io/blob/master/travaux_pratiques/search.zip)**
 
 
 ### Fichiers de programmation ###
